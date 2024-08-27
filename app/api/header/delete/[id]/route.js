@@ -1,5 +1,5 @@
-import ConnectDB from "@/app/db/Connect";
-import Header from "@/app/models/Header";
+import Header from "@/models/Header";
+import ConnectDB from "@/mongodb";
 import { NextResponse } from "next/server";
 
 export const DELETE = async (req, { params }) => {
