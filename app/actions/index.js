@@ -1,10 +1,8 @@
 import { toast } from "@/components/ui/use-toast";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
 export const getData = async (currentTab) => {
   try {
-    const res = await fetch(`${baseUrl}/api/${currentTab}/get`, {
+    const res = await fetch(`/api/${currentTab}/get`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

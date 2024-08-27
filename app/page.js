@@ -11,12 +11,13 @@ import Hero from "./sections/hero/Hero";
 //   const { data } = await axios.get(`http://localhost:3000/api/${page}/get`);
 //   return data && data.data;
 
-import { getData } from "./actions";
 import Navbar from "./components/Navbar";
+import { fetchPageData } from "./Fetchers";
 
 // };
 export default async function Home() {
-  const heroData = await getData("header");
+  const heroData = await fetchPageData("header");
+
   // const aboutData = await fetchPageData("about");
   // const contactData = await fetchPageData("contact");
   // const servicesData = await fetchPageData("services");
